@@ -1,4 +1,3 @@
-@phone (max-width: 500px);
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -183,6 +182,14 @@ h1 {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
 .mainpic {
   width: 100%;
   margin: 0 auto;
@@ -190,7 +197,7 @@ h1 {
 .signup-btn {
   font-size: 2rem;
   color: white;
-  border-radius: 10%;
+  border-radius: 5px;
   padding: 10px 15px;
   background: black ;
 }
@@ -208,54 +215,123 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.home .intro h2 {
+@media (max-width: 500px) {
+  .main-container {
+    width: 100%;
+  }
+}
+.main-container .intro .main-header-img {
+  border-radius: 2%;
+  width: 98%;
+  margin: 0 auto;
+}
+.main-container .intro h2 {
   padding: 15px;
 }
-.home .intro p {
+.main-container .intro p {
   padding: 0 15px;
 }
-.home .space-images {
+.space-images {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
-.home .space-images img {
+.space-images img {
   width: 28%;
   margin: 20px 2.5%;
   border-radius: 20px;
   height: 100%;
 }
-.home .visit-planets {
+@media (max-width: 500px) {
+  .space-images .blast {
+    width: 85%;
+  }
+}
+@media (max-width: 500px) {
+  .space-images .sky {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .space-images .launch {
+    display: none;
+  }
+}
+.visit-planets {
   padding: 15px;
 }
-.home .visit-planets h3 {
+.visit-planets h3 {
   margin-top: 11px;
 }
-.home .visit-planets p {
+.visit-planets p {
   margin-top: 13px;
 }
-.home .walk {
+.walk {
   margin-top: 60px;
+  padding-top: 30px;
   border-top: 1px solid #dee2e6;
-  padding: 50px 60px;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
-.home .walk .walk-text {
+.walk .walk-text {
   width: 50%;
+  padding-left: 20px;
 }
-.home .walk .walk-text h3 {
+.walk .walk-text h3 {
   margin-bottom: 10px;
 }
-.home .walk .walk-text p {
+.walk .walk-text p {
   margin-bottom: 26px;
 }
-.home .walk .walk-img {
+.walk .walk-text .btn {
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .walk .walk-text .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .walk .walk-text .btn .signup-btn {
+    width: 100%;
+    background-color: black;
+  }
+}
+.walk .walk-text .btn .signup-btn:hover {
+  background-color: white;
+  color: black;
+}
+@media (max-width: 500px) {
+  .walk .walk-text {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+.walk .walk-img {
   width: 46%;
   margin-left: 4%;
 }
-.home .walk .walk-img img {
+.walk .walk-img img {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .walk .walk-img img {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .walk .walk-img {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .walk {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 85%;
+  }
 }
